@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性格診断</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="logo-area">
+        <img src="img/logo.png" alt="">
+    </div>
+    <div class="heading-text" id="heading-text">
+        <p>これから30秒以内に13の質問に回答してください。</p>
+        <p>時間制限のある中で行うことで、見栄や飾りのない直感的な回答となります。</p>
+        <p>それにより、診断の正確性が向上します。</p>
+    </div>
+
+    <button onclick="ansStart()" id="ansStartButton">やってみる</button>
+
+    <div id="ansArea">
+        <!-- 問題文 -->
+        <h2 id="question"></h2>
+        <!-- 選択肢ボタン -->
+        <div class="answers-container">
+            <button onclick="onAnswerSelected(1)" id="ansButton1" style="display: none;"></button>
+            <button onclick="onAnswerSelected(2)" id="ansButton2" style="display: none;"></button>
+        </div>
+        <!-- タイマー -->
+        <p id="countDown"></p>
+    </div>
+    <div id="result"></div>
+    <footer>
+        <p>&copy; 2023 Keisuke Takeda</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
